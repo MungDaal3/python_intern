@@ -15,4 +15,4 @@ def test_down():
 
 
 def test_http_erorr():
-    assert "Error" in str(is_alive_host('semrush.com/inv'))
+    assert "Error" in str(is_alive_host('semrush.com/invalid'))
