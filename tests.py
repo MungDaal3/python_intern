@@ -12,3 +12,7 @@ def test_live():
 
 def test_down():
     assert not is_alive_host('invalid.domain.son')
+
+
+def test_http_erorr():
+    assert "Error" in str(is_alive_host('https://www.semrush.com/inv'))
