@@ -2,8 +2,9 @@
 app example
 
 """
-
+import requests
 
 def is_alive_host(hostname):
-    """Проверить, что запрашиваемый хост возвращает http status 100<=x<400."""
-    pass
+    response = requests.get("https://www."+hostname)
+    return response.status_code == requests.codes.ok
+
