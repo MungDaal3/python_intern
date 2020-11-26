@@ -4,7 +4,7 @@ app example
 """
 import requests
 
-def is_alive_host(hostname):
+def is_alive_host(hostname: str):
     response = requests.get("https://www."+hostname)
     return response.status_code == requests.codes.ok
 
