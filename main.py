@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/health")
 def read_item(hostname: str):
-    if is_alive_host(hostname):
+    if is_alive_host(hostname) is True:
         return {"status": "up"}
     else:
         return {"status": "down"}
